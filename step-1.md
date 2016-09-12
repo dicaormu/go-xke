@@ -5,11 +5,18 @@ title: Step-1
 
 # Implementation
 
+Avant de commencer avec le Step-1 assurez-vous d'avoir executé sur le code de la branche:
+
+```sh
+$ go get github.com/vil-coyote-acme/go-concurrency/commons
+$ go get github.com/stretchr/testify/assert
+```
+
 ## Module d'enregistrement
 
 La première étape consiste à s'enregistrer auprès des clients. Pour cela, il va falloir compléter l'implémentation de *registration.go*.
 
-### cas nominal
+### Cas nominal
 
 Lancez le premier test à l'aide de la commande suivante:
 
@@ -54,7 +61,7 @@ registration sérialisé. Pour ce faire, utiliser *NewBuffer(myByteArray)* du pa
     http.Post(clientRegistrationURL, "application/json", bytes.NewBuffer(body))
 </blockquote>
 
-### cas de rejet de la requete de la part du client
+### Cas de rejet de la requete de la part du client
 
 Si le nom de joueur que vous avez choisi est déjà pris, ou si vous essayez de vous enregistrer plusieurs fois 
 (et donc de truander !) le client peut rejeter votre demande d'enregistrement.
@@ -166,7 +173,7 @@ paymentRes, paymentErr := http.Get(order.CallBackUrl)
 # Lancement de votre programme :
 
 Bravo! 
-vous avez une première version du bartender. Pour le tester, postionnez-vous sous *$GOPATH/src/github.com/vil-coyote-acme/go-xke*, puis lancer: 
+vous avez une première version du serveur. Pour le tester, postionnez-vous sous *$GOPATH/src/github.com/vil-coyote-acme/go-xke*, puis lancez: 
 
 ```
 $ go run xke-app.go -clientIp={{clientIp}} -ourIp={{ourIp}} -bartenderIp={{bartenderIp}} -playerId={{playerId}}
