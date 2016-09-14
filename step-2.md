@@ -38,9 +38,10 @@ c:= make(chan Poney)
 </blockquote>
 
 Vous pouvez traiter plusieurs commandes de manière concurrente, mais rappelez-vous de vous limiter à 5.
-Aidez-vous des go routines pour creer les travails qui consomment des *orders* du channel de manière concurrente.
 
 <blockquote class = 'help' markdown="1">
+
+Aidez-vous des go routines pour creer les travails qui consomment des *orders* du channel de manière concurrente.
 
 ```go
 
