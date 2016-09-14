@@ -41,6 +41,7 @@ Vous pouvez traiter plusieurs commandes de manière concurrente, mais rappelez-v
 
 <blockquote class = 'help' markdown="1">
 Aidez-vous des go routines pour creer 5 travails qui consoment des *orders* du channel de manière concurrente.
+
 ```go
 
 for i := 0; i < 5; i ++ {
